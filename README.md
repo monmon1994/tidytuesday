@@ -6,5 +6,5 @@ https://github.com/rfordatascience/tidytuesday
 Week 11: 10-03-2020
 A barplot of which states (and their universities) give the highest early career salary in the United States.
 
-Week 16: 2020-04-14
+Week 16: 14-04-2020
 Density plot of hip-hop BBC Music 
