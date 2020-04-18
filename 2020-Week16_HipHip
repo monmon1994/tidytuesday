@@ -1,0 +1,14 @@
+library(tidyverse)
+
+polls <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-04-14/polls.csv')
+rankings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-04-14/rankings.csv')
+
+rankings %>% 
+    group_by(year) %>% 
+    mutate(points = max(points)) %>% 
+ggplot(aes(x = year, fill = points)) +
+    geom_density(fill = "#00A08A") +
+    labs(title = "BBC Music's greatest hip-hop songs by Year", y = "Points", x = "",
+         caption = "Source: BBC Music | @Mon_Bennett8 | #TidyTuesday") +
+    theme(text = element_text(family = "EB Garamond 08", size = 15),
+          plot.title = element_text(family = "EB Garamond 08", size = 20)) 
